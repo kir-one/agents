@@ -46,7 +46,8 @@ class NatutalSelection():
             self.globalBest = self.pop[0].fitness
             self.globalBestIndividual.dna = copy.deepcopy(self.dna)
             self.save()
-
+    
+    # aqui es donde ocurre la mágía
     def evolve(self):
         print("EVOLVE")
         self.set_best()
