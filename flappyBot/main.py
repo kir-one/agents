@@ -48,7 +48,7 @@ def main(genomes, config):
     ge = []
     birds = []
 
-    # retorno de los valores
+    # carga genética
     for _, g in genomes:
         net = neat.nn.FeedForwardNetwork.create(g, config)
         nets.append(net)
@@ -85,7 +85,7 @@ def main(genomes, config):
         if score == 30:
             break
 
-        # se va añadiendo peso a los genomas
+        # se va añadiendo puntos a la función fitness
         for x, bird in enumerate(birds):
             bird.move()
             ge[x].fitness += .1
